@@ -40,7 +40,9 @@ const katexMathRenderInterval = () => {
 }
 
 const addMathExpression = (expression, length) => {
+    
     katexInputString = katexInputString.slice(0,katexInputStringPosition) + expression + katexInputString.slice(katexInputStringPosition, katexInputString.length)
     katexInputStringPosition += length
     katexMathRenderInterval()
+
 }

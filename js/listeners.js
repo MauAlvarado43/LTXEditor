@@ -1,12 +1,14 @@
 document.addEventListener('click', (e) => {
-    if(e.target.id == 'katex-input' || e.target.tagName == 'svg' || e.target.tagName == 'SPAN'){
+    if(e.target.id == 'katex-input' || e.target.tagName == 'svg' || e.target.tagName == 'SPAN' || e.target.className == 'katex-input-container'){
         
         if(!inputActive)
             inputActive = true
             katexMathRenderInterval()
     }
-    else{
-        inputActive = false
+    else if(e.target.className == 'btn-k'){
+
+        if(e.target.className == 'btn-k') 
+            inputActive = true
 
         if(interval) 
             clearInterval(interval)
@@ -16,6 +18,20 @@ document.addEventListener('click', (e) => {
         })
 
     }
+    else{
+
+        inputActive = false
+
+        if(interval) 
+            clearInterval(interval)
+
+        
+        katex.render( katexInputString, document.getElementById('katex-input'), {
+            throwOnError: false, displayMode: true
+        })
+
+    }
+    
 })
 
 document.addEventListener('keydown', (e) => {
