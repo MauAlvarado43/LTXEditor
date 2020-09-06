@@ -31,15 +31,15 @@
         <!------------------------------------------------------------------->
 
         <div class="tab">
-            <button class="tablinks active" onclick="openKeyboard(event, 'basic')">Basic</button>
-            <button class="tablinks" onclick="openKeyboard(event, 'large')">Large</button>
-            <button class="tablinks" onclick="openKeyboard(event, 'greekAlphabet')">Greek Alphabet</button>
-            <button class="tablinks" onclick="openKeyboard(event, 'logicTheory')">Logic and Set Theory</button>
-            <button class="tablinks" onclick="openKeyboard(event, 'functions')">Functions</button>
-            <button class="tablinks" onclick="openKeyboard(event, 'arrows')">Arrows</button>
-            <button class="tablinks" onclick="openKeyboard(event, 'accents')">Accents</button>
-            <button class="tablinks" onclick="openKeyboard(event, 'delimiters')">Delimiters</button>
-            <button class="tablinks" onclick="openKeyboard(event, 'environments')">Environments</button>
+            <button class="tablinks active" onclick="openKeyboard(event, 'basic')">$$ = $$</button>
+            <button class="tablinks" onclick="openKeyboard(event, 'large')">$$ \sum $$</button>
+            <button class="tablinks" onclick="openKeyboard(event, 'greekAlphabet')">$$ \theta $$</button>
+            <button class="tablinks" onclick="openKeyboard(event, 'logicTheory')">$$ \exists $$</button>
+            <button class="tablinks" onclick="openKeyboard(event, 'functions')">$$ f(x) $$</button>
+            <button class="tablinks" onclick="openKeyboard(event, 'arrows')">$$ \circlearrowleft $$</button>
+            <button class="tablinks" onclick="openKeyboard(event, 'accents')">$$ \widehat{AB} $$</button>
+            <button class="tablinks" onclick="openKeyboard(event, 'delimiters')">$$ \left( A \right) $$</button>
+            <button class="tablinks" onclick="openKeyboard(event, 'environments')" style="width: 12% !important;">$$ \begin{pmatrix} a & b \\ c & d \end{pmatrix}  $$</button>
         </div>
 
         <!------------------------------------------------------------------->
@@ -50,6 +50,9 @@
 
             <table>
                 <tr>
+                    <td>
+                        <button type="button" class="btn-k" onclick="addMathExpression('\\pm ', 4)">$$ \pm $$</button>
+                    </td>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('+', 1)">$$ + $$</button>
                     </td>
@@ -63,13 +66,16 @@
                         <button type="button" class="btn-k" onclick="addMathExpression('\\div ', 5)">$$ \div $$</button>
                     </td>
                     <td>
+                        <button type="button" class="btn-k" onclick="addMathExpression('\\centerdot ', 11)" style="width: 100% !important;">$$ \centerdot $$</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('<', 1)">$$ < $$</button>
                     </td>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('>', 1)">$$ > $$</button>
                     </td>
-                </tr>
-                <tr>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\leq ', 5)">$$ \leq $$</button>
                     </td>
@@ -82,14 +88,14 @@
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\geqslant ', 10)">$$ \geqslant $$</button>
                     </td>
+                </tr>
+                <tr>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\gg ', 4)">$$ \gg $$</button>
                     </td>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\ll ', 4)">$$ \ll $$</button>
                     </td>
-                </tr>
-                <tr>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('=', 1)">$$ = $$</button>
                     </td>
@@ -102,14 +108,11 @@
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\approx ', 8)">$$ \approx $$</button>
                     </td>
+                </tr>
+                <tr>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\approxeq ', 10)">$$ \approxeq $$</button>
                     </td>
-                    <td>
-                        <button type="button" class="btn-k" onclick="addMathExpression('\\bmod\\left(\\right)', 11)">$$ \bmod{(a)} $$</button>
-                    </td>
-                </tr>
-                <tr>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\frac{}{}', 6)">$$ \frac{a}{b} $$</button>
                     </td>
@@ -125,13 +128,16 @@
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('!', 1)">$$ x! $$</button>
                     </td>
-                    <td>
-                        <button type="button" class="btn-k" onclick="addMathExpression('\\sqrt{}', 6)">$$ \sqrt{x} $$</button>
-                    </td>
                 </tr>
                 <tr>
                     <td>
+                        <button type="button" class="btn-k" onclick="addMathExpression('\\sqrt{}', 6)">$$ \sqrt{x} $$</button>
+                    </td>
+                    <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\sqrt[]{}', 6)">$$ \sqrt[n]{x} $$</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn-k" onclick="addMathExpression('\\bmod\\left(\\right)', 11)">$$ \bmod{(a)} $$</button>
                     </td>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\circ ', 6)">$$ \circ $$</button>
@@ -139,12 +145,7 @@
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\times ', 7)">$$ \times $$</button>
                     </td>
-                    <td>
-                        <button type="button" class="btn-k" onclick="addMathExpression('\\pm ', 4)">$$ \pm $$</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn-k" onclick="addMathExpression('\\centerdot ', 11)" style="width: 100% !important;">$$ \centerdot $$</button>
-                    </td>
+
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\bullet ', 8)">$$ \bullet $$</button>
                     </td>
@@ -1151,7 +1152,13 @@
                         <button type="button" class="btn-k" onclick="addMathExpression('\,', 1)">$$ , $$</button>
                     </td>
                     <td>
+                        <button type="button" class="btn-k" onclick="addMathExpression('\\colon ', 7)">$$ \colon $$</button>
+                    </td>
+                    <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\'', 1)">$$ a' $$</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn-k" onclick="addMathExpression('\\backprime ', 11)">$$ \backprime $$</button>
                     </td>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\bar{}', 5)">$$ \bar{a} $$</button>
@@ -1159,14 +1166,14 @@
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\breve{}', 7)">$$ \breve{a} $$</button>
                     </td>
+                </tr>
+                <tr>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\check{}', 7)">$$ \check{a} $$</button>
                     </td>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\dot{}', 5)">$$ \dot{a} $$</button>
                     </td>
-                </tr>
-                <tr>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\dot{}', 5)">$$ \dot{a} $$</button>
                     </td>
@@ -1177,16 +1184,16 @@
                         <button type="button" class="btn-k" onclick="addMathExpression('\°', 5)">$$ a° $$</button>
                     </td>
                     <td>
-                        <button type="button" class="btn-k" onclick="addMathExpression('\\text{\\S} ', 10)">$$ \text{\S} $$</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn-k" onclick="addMathExpression('\\backprime ', 11)">$$ \backprime $$</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn-k" onclick="addMathExpression('\\colon ', 7)">$$ \colon $$</button>
+                        <button type="button" class="btn-k" onclick="addMathExpression('\\hat{}', 5)">$$ \hat{a} $$</button>
                     </td>
                 </tr>
                 <tr>
+                    <td>
+                        <button type="button" class="btn-k" onclick="addMathExpression('\\tilde{}', 7)">$$ \tilde{a} $$</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn-k" onclick="addMathExpression('\\text{\\S} ', 10)">$$ \text{\S} $$</button>
+                    </td>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\% ', 3)">$$ \% $$</button>
                     </td>
@@ -1197,13 +1204,7 @@
                         <button type="button" class="btn-k" onclick="addMathExpression('\\bot ', 5)">$$ \bot $$</button>
                     </td>
                     <td>
-                        <button type="button" class="btn-k" onclick="addMathExpression('\\hat{}', 5)">$$ \hat{\theta} $$</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn-k" onclick="addMathExpression('\\widehat{}', 9)">$$ \widehat{AB} $$</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn-k" onclick="addMathExpression('\\tilde{}', 7)">$$ \tilde{a} $$</button>
+                        <button type="button" class="btn-k" onclick="addMathExpression('\\vec{}', 5)">$$ \vec{F} $$</button>
                     </td>
                 </tr>
                 <tr>
@@ -1214,7 +1215,7 @@
                         <button type="button" class="btn-k" onclick="addMathExpression('\\utilde{}', 8)">$$ \utilde{AB} $$</button>
                     </td>
                     <td>
-                        <button type="button" class="btn-k" onclick="addMathExpression('\\vec{}', 5)">$$ \vec{F} $$</button>
+                        <button type="button" class="btn-k" onclick="addMathExpression('\\widehat{}', 9)">$$ \widehat{AB} $$</button>
                     </td>
                     <td>
                         <button type="button" class="btn-k" onclick="addMathExpression('\\overleftarrow{}', 15)">$$ \overleftarrow{AB} $$</button>

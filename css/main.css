@@ -3,11 +3,12 @@ body {
     font-family: Arial;
 }
 
-.katex-input-container{
+.katex-input-container {
     border-color: black;
     border-style: solid;
     width: 99%;
     overflow: scroll;
+    max-height: 10rem;
 }
 
 .tab {
@@ -22,8 +23,8 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 12px 18px;
-    transition: 0.3s;
+    width: 11%;
+    height: 5rem;
     font-size: 17px;
 }
 
@@ -47,27 +48,28 @@ body {
     max-height: 22rem;
 }
 
-.katex-input{
+.katex-input {
     vertical-align: middle;
     height: 8rem;
+    max-height: 8rem;
     width: 100%;
     display: table-cell;
     font-size: 1.3rem;
     padding: 10px;
 }
 
-.btn-k{
+.btn-k {
     text-align: center;
     vertical-align: middle;
-    width: 6rem;
-    height: 4rem;
+    width: 6.8rem;
+    height: 5rem;
     font-size: small !important;
 }
 
-.ktx-editor{
+.ktx-editor {
     margin-left: auto;
     margin-right: auto;
     width: 47%;
 }
 
-.katex { font-size: 1em !important; } 
+.katex { font-size: 1.25em !important; } 

@@ -287,12 +287,16 @@ document.addEventListener('keydown', (e) => {
             
         }
         //NUMBERS
+        else if(e.keyCode >= 96 && e.keyCode <= 105){
+            katexInputString = katexInputString.slice(0, katexInputStringPosition) + e.key + katexInputString.slice(katexInputStringPosition, katexInputString.length)
+            addPosition()
+        }
         else if(e.keyCode >= 48 && e.keyCode <= 57 && !e.shiftKey){
             katexInputString = katexInputString.slice(0, katexInputStringPosition) + e.key + katexInputString.slice(katexInputStringPosition, katexInputString.length)
             addPosition()
         }
         //LETTERS
-        else if(e.keyCode >= 65 && e.keyCode <= 90 && !e.shiftKey){
+        else if(e.keyCode >= 65 && e.keyCode <= 90){
             katexInputString = katexInputString.slice(0, katexInputStringPosition) + e.key + katexInputString.slice(katexInputStringPosition, katexInputString.length)
             addPosition()
         }
@@ -324,6 +328,24 @@ document.addEventListener('keydown', (e) => {
                 }
             }
         }
+        else if(e.keyCode == 106)
+            addMathExpression('*', 1)
+        else if(e.keyCode == 107)
+            addMathExpression('+', 1)
+        else if(e.keyCode == 109)
+            addMathExpression('-', 1)
+        else if(e.keyCode == 110)
+            addMathExpression('\\centerdot ', 11)
+        else if(e.keyCode == 111)
+            addMathExpression('\\div ', 5)
+        else if(e.keyCode == 187 && !e.shiftKey)
+            addMathExpression('+', 1)
+        else if(e.keyCode == 187 && e.shiftKey)
+            addMathExpression('*', 1)
+        else if(e.keyCode == 189 && !e.shiftKey)
+            addMathExpression('-', 1)
+        else if(e.keyCode == 190 && !e.shiftKey)
+            addMathExpression('\\centerdot ', 11)
 
         katexMathRenderInterval()
     }
